@@ -94,8 +94,8 @@ RenderCustom.create = function(options) {
         element: null,
         canvas: null,
         options: {
-            width: 800,
-            height: 600,
+            width: 1200,
+            height: 1200,
             background: '#fafafa',
             wireframeBackground: '#222',
             hasBounds: false,
@@ -169,44 +169,44 @@ RenderCustom.create = function(options) {
     
     filtersMask = 0;
     
-    render.texture = new PIXI.RenderTexture(render.context, render.options.width, render.options.height);
-    render.texture.render(render.container);
+    // render.texture = new PIXI.RenderTexture(render.context, render.options.width, render.options.height);
+    // render.texture.render(render.container);
     
-    render.texture2 = new PIXI.RenderTexture(render.context, render.options.width, render.options.height);
-    render.texture2.render(render.container);
+    // render.texture2 = new PIXI.RenderTexture(render.context, render.options.width, render.options.height);
+    // render.texture2.render(render.container);
     
     render.texture3 = new PIXI.RenderTexture(render.context, render.options.width, render.options.height);
     render.texture3.render(render.container);
     
-    render.sprite = new PIXI.Sprite(render.texture);
-    render.sprite2 = new PIXI.Sprite(render.texture2);
+    // render.sprite = new PIXI.Sprite(render.texture);
+    // render.sprite2 = new PIXI.Sprite(render.texture2);
     render.sprite3 = new PIXI.Sprite(render.texture3);
     
-    render.sprite.x = 0;
-    render.sprite.y = 0;
+    // render.sprite.x = 0;
+    // render.sprite.y = 0;
     
-    render.sprite2.x = render.options.width;
-    render.sprite2.y = 0;
+    // render.sprite2.x = render.options.width;
+    // render.sprite2.y = 0;
     
-    render.sprite3.x = render.options.width * 2;
+    render.sprite3.x = 0;
     render.sprite3.y = 0;
     
     render.stage.addChild(render.sprite3);
-    render.stage.addChild(render.sprite2);
-    render.stage.addChild(render.sprite);
+    // render.stage.addChild(render.sprite2);
+    // render.stage.addChild(render.sprite);
     
-    var pass1 = new PIXI.Text('Pass 1:\nHigh Constrast Render', {font: 'bold 12px Arial', fill : 0xffffff, stroke : 0x000000, strokeThickness : 2 });
-    pass1.x = 10;
-    pass1.y = 10;
-    render.stage.addChild(pass1);
+    // var pass1 = new PIXI.Text('Pass 1:\nHigh Constrast Render', {font: 'bold 12px Arial', fill : 0xffffff, stroke : 0x000000, strokeThickness : 2 });
+    // pass1.x = 10;
+    // pass1.y = 10;
+    // render.stage.addChild(pass1);
     
-    var pass2 = new PIXI.Text('Pass 2:\nGaussian Blur', {font: 'bold 12px Arial', fill : 0xffffff, stroke : 0x000000, strokeThickness : 2 });
-    pass2.x = 10 + render.options.width;
-    pass2.y = 10;
-    render.stage.addChild(pass2);
+    // var pass2 = new PIXI.Text('Pass 2:\nGaussian Blur', {font: 'bold 12px Arial', fill : 0xffffff, stroke : 0x000000, strokeThickness : 2 });
+    // pass2.x = 10 + render.options.width;
+    // pass2.y = 10;
+    // render.stage.addChild(pass2);
     
     var pass3 = new PIXI.Text('Pass 3:\nThreshold Filter', {font: 'bold 12px Arial', fill : 0xffffff, stroke : 0x000000, strokeThickness : 2 });
-    pass3.x = 10 + render.options.width * 2;
+    pass3.x = 10;
     pass3.y = 10;
     render.stage.addChild(pass3);
     

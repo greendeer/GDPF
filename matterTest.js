@@ -50,8 +50,8 @@ $(function() {
         render: {
             options: {
                 hasBounds: true,
-                height: 200,
-                width: 200
+                height: 600,
+                width: 600
             },
             controller: RenderCustom
         }

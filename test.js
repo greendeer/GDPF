@@ -71,10 +71,11 @@ function requestOrientationPermission() {
                 window.addEventListener('devicemotion', (e) => {
                     var eventData = e;
                     document.getElementById('rawData').innerHTML = 'a' + eventData;
-                    accelerationHandler(eventData.acceleration, 'moAccel');
-                    accelerationHandler(eventData.accelerationIncludingGravity, 'moAccelGrav');
-                    rotationHandler(eventData.rotationRate);
-                    intervalHandler(eventData.interval);
+                    console.log(eventData);
+                    //accelerationHandler(eventData.acceleration, 'moAccel');
+                    //accelerationHandler(eventData.accelerationIncludingGravity, 'moAccelGrav');
+                    //rotationHandler(eventData.rotationRate);
+                    //intervalHandler(eventData.interval);
                 })
             }
         })

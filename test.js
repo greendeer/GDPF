@@ -34,6 +34,8 @@ if ('LinearAccelerationSensor' in window && 'Gyroscope' in window) {
         //console.log(eventData);
         //accelerationHandler(eventData.acceleration, 'moAccel');
         accelerationHandler(eventData.accelerationIncludingGravity, 'moAccelGrav');
+        engine.world.gravity.x=eventData.accelerationIncludingGravity.x;
+        engine.world.gravity.y=eventData.accelerationIncludingGravity.y;
         //rotationHandler(eventData.rotationRate);
         intervalHandler(eventData.interval);
     }

@@ -30,7 +30,7 @@ if ('LinearAccelerationSensor' in window && 'Gyroscope' in window) {
     document.getElementById('moApi').innerHTML = 'Device Motion API';
     
     var onDeviceMotion = function (eventData) {
-      document.getElementById('rawData').innerHTML = eventData;
+      document.getElementById('rawData').innerHTML = 'a' + eventData;
       accelerationHandler(eventData.acceleration, 'moAccel');
       accelerationHandler(eventData.accelerationIncludingGravity, 'moAccelGrav');
       rotationHandler(eventData.rotationRate);

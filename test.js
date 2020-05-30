@@ -65,10 +65,10 @@ function intervalHandler(interval) {
 }
 
 function requestOrientationPermission() {
-    DeviceOrientationEvent.requestPermission()
+    DeviceMotionEvent.requestPermission()
         .then(response => {
             if (response == 'granted') {
-                window.addEventListener('deviceorientation', (e) => {
+                window.addEventListener('devicemotion', (e) => {
                     var eventData = e;
                     document.getElementById('rawData').innerHTML = 'a' + eventData;
                     accelerationHandler(eventData.acceleration, 'moAccel');

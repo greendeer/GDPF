@@ -376,15 +376,15 @@ RenderCustom.world = function({ engine }) {
     
     //context.render(container);
     
-    //render.container.filters = [b, t];
-    render.texture.clear();
-    render.texture2.clear();
+    // //render.container.filters = [b, t];
+    // render.texture.clear();
+    // render.texture2.clear();
     render.texture3.clear();
     
-    render.container.filters = null;
-    render.texture.render(render.container);
-    render.container.filters = [b];
-    render.texture2.render(render.container);
+    // render.container.filters = null;
+    // render.texture.render(render.container);
+    // render.container.filters = [b];
+    // render.texture2.render(render.container);
     render.container.filters = [b, t];
     render.texture3.render(render.container);
     

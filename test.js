@@ -33,9 +33,9 @@ if ('LinearAccelerationSensor' in window && 'Gyroscope' in window) {
         document.getElementById('rawData').innerHTML = 'a' + eventData;
         console.log(eventData);
         //accelerationHandler(eventData.acceleration, 'moAccel');
-        //accelerationHandler(eventData.accelerationIncludingGravity, 'moAccelGrav');
+        accelerationHandler(eventData.accelerationIncludingGravity, 'moAccelGrav');
         //rotationHandler(eventData.rotationRate);
-        //intervalHandler(eventData.interval);
+        intervalHandler(eventData.interval);
     }
 
     window.addEventListener('devicemotion', onDeviceMotion, false);
